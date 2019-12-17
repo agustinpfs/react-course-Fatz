@@ -4,13 +4,13 @@ import './App.css';
 
 function HelloWorld() {
   return (
-    <div>hello World</div>
+    <div id="hello">hello World</div>
   );
 }
 
 function App() {
   return (
-    <div> This is my component: <HelloWorld/> </div>
+    <div> This is my component: <HelloWorld/> <HelloWorld/></div>
   );
 }
 
