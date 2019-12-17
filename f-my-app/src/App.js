@@ -8,9 +8,17 @@ function HelloWorld() {
   );
 }
 
+// class App extends React.Component {
+//   render() {
+//     return   <div> This is my component: <HelloWorld/> </div>
+//   }
+// }
+
+// const App = () => <div> This is my component: <HelloWorld/> </div>
+
 function App() {
   return (
-    <div> This is my component: <HelloWorld/> <HelloWorld/></div>
+    <div> This is my component: <HelloWorld/></div>
   );
 }
 
