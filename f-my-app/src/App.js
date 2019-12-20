@@ -10,12 +10,9 @@ class App extends Component{
     tasks: tasks
   }
 
-  render() {
-    return <div>
-      {this.state.tasks.map(e => <p key={e.id}>
-        {e.title} - {e.description} - {e.done} - {e.id}
-        <Tasks/>        
-        </p>)}
+  render() {   //key={e.id} -> so that no error
+    return <div> 
+      <Tasks tasks={this.state.tasks}></Tasks>
     </div>
   }
 }

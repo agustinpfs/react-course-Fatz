@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
+import Task from './Task';
 
 
+// list tasks:
 class Tasks extends Component {
     render(){
-        return <h1>Tasks</h1>
+        return this.props.tasks.map(task => <Task task={task} key={task.id}></Task>)
     }
 }
 
