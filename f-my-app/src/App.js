@@ -14,9 +14,21 @@ class App extends Component{
     tasks: tasks 
   }
 
+  addTask = (title, description) => {
+    const newTask = {
+      title: title,
+      description: description,
+      id: this.state.tasks.length
+    }
+    // console.log(newTask)
+    this.setState({
+      tasks: [...this.state.tasks, newTask]
+    })
+  }
+
   render() {   //key={e.id} -> so that no error
     return <div> 
-      <TaskForm />
+      <TaskForm addTask={this.addTask}/>
       <Tasks tasks={this.state.tasks}></Tasks>  {/* //iterate through tasks with map method*/}
     </div>
   }

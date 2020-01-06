@@ -12,7 +12,7 @@ class Tasks extends Component {
     }
 }
 
-Task.propTypes  = {                                    //specify the data type of properties 
+Tasks.propTypes  = {                                    //specify the data type of properties 
     tasks : PropTypes.array.isRequired               //expect a property called task with data type "object"
 } 
 
