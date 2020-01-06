@@ -7,8 +7,8 @@ class Task extends Component {
     StyleCompleted() {     /* when task is completed */
         return {
             fontSize: '20px',
-            color: 'gray',
-            textDecoration: 'none'
+            color: this.props.task.done ? 'gray' : 'blak', //of the task I am receiving, if its "done" property is true, place the text in gray, if not in black
+            textDecoration: this.props.task.done ? 'line-through' : 'none'
         }
     }
 

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Task from './Task';
-import { array } from 'prop-types';
+// import { array } from 'prop-types';
 
 
 // list tasks:
