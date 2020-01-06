@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './Task.css';
+// import './Task.css';
 
 
 class Task extends Component {
@@ -19,7 +19,13 @@ class Task extends Component {
 }
 
 const btnDelete = {
-    fontSize : '18px'
+    fontSize : '18px',
+    background: '#ea2027',
+    color: '#fff',
+    border: 'none',
+    padding: '10px 15px',
+    borderRadius: '50%',
+    cursor: 'pointer'
 }
 
 export default Task;
