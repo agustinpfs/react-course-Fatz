@@ -5,17 +5,21 @@ import './Task.css';
 class Task extends Component {
     render(){
         const {task} = this.props;
-        return <p className='red'>
+        return <p>
             {task.title} - 
             {task.description} - 
             {task.done} - 
             {task.id}
             <input type ="checkbox" />
-            <button>
+            <button style={btnDelete}>
                 X
             </button>
             </p>
     }
+}
+
+const btnDelete = {
+    fontSize : '18px'
 }
 
 export default Task;
