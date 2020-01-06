@@ -28,6 +28,10 @@ class Task extends Component {
     }
 }
 
+Task.propTypes  = {                                    //specify the data type of properties 
+    task : PropTypes.object.isRequired               //expect a property called task with data type "object"
+}  
+
 const btnDelete = {
     fontSize : '18px',
     background: '#ea2027',
