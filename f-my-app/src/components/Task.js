@@ -3,9 +3,18 @@ import React, {Component} from 'react';
 
 
 class Task extends Component {
+
+    StyleCompleted() {     /* when task is completed */
+        return {
+            fontSize: '20px',
+            color: 'gray',
+            textDecoration: 'none'
+        }
+    }
+
     render(){
         const {task} = this.props;
-        return <p>
+        return <p style={this.StyleCompleted()}>
             {task.title} - 
             {task.description} - 
             {task.done} - 
