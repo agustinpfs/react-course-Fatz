@@ -6,7 +6,7 @@ import tasks from './sample/tasks.json';
 // Components
 import Tasks from './components/Tasks';
 import TaskForm from './components/TaskForm';
-
+import Posts from './components/Posts'
 
 class App extends Component{
 
@@ -45,7 +45,13 @@ class App extends Component{
   render() {   //key={e.id} -> so that no error
     return <div> 
       <TaskForm addTask={this.addTask}/>
-      <Tasks tasks={this.state.tasks} deleteTask={this.deleteTask} checkDone={this.checkDone} />  {/* //iterate through tasks with map method*/}
+      <Tasks 
+        tasks={this.state.tasks} 
+        deleteTask={this.deleteTask} 
+        checkDone={this.checkDone} 
+
+      />  {/* //iterate through tasks with map method*/}
+      <Posts /> 
     </div>
   }
 }
