@@ -1,4 +1,5 @@
 import React, {Component} from 'react';  //{Component} is to remove React from React.Component in the component
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import './App.css';
 
 import tasks from './sample/tasks.json';
@@ -43,15 +44,31 @@ class App extends Component{
   }
 
   render() {   //key={e.id} -> so that no error
-    return <div> 
-      <TaskForm addTask={this.addTask}/>
-      <Tasks 
-        tasks={this.state.tasks} 
-        deleteTask={this.deleteTask} 
-        checkDone={this.checkDone} 
+    return <div>
+      <Router>
 
-      />  {/* //iterate through tasks with map method*/}
-      <Posts /> 
+        <Link to='/'>Home</Link>
+        <br/>
+        <br/>
+        <Link to='/posts'>Posts</Link>
+        
+        <Route exact path="/" render={ () => {     {/* //create route in browser */}
+            return <div>
+                      <TaskForm addTask={this.addTask}/>
+                      <Tasks 
+                        tasks={this.state.tasks} 
+                        deleteTask={this.deleteTask} 
+                        checkDone={this.checkDone}
+                      />  
+                    </div>
+        }}>  
+        </Route>
+        <Route path="/posts" component={Posts} /> {/* //Post component rendering */}
+      </Router>
+
+
+      
+      {/* <Posts />  */} 
     </div>
   }
 }
