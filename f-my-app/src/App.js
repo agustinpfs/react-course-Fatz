@@ -26,10 +26,19 @@ class App extends Component{
     })
   }
 
+  deleteTask = (id) => {
+    const newTasks = this.state.tasks.filter(task => task.id !== id);
+    console.log(newTasks)
+  }
+
+  checkDone = () => {
+    
+  }
+
   render() {   //key={e.id} -> so that no error
     return <div> 
       <TaskForm addTask={this.addTask}/>
-      <Tasks tasks={this.state.tasks}></Tasks>  {/* //iterate through tasks with map method*/}
+      <Tasks tasks={this.state.tasks} deleteTask={this.deleteTask}/>  {/* //iterate through tasks with map method*/}
     </div>
   }
 }

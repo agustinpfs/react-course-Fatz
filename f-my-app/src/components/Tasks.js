@@ -8,7 +8,12 @@ import PropTypes from 'prop-types';
 // list tasks:
 class Tasks extends Component {
     render(){
-        return this.props.tasks.map(task => <Task task={task} key={task.id}></Task>) //key={e.id} -> so that no error
+        return this.props.tasks.map(task => 
+        <Task
+            task={task} 
+            key={task.id} 
+            deleteTask={this.props.deleteTask} 
+        />) //key={task.id} -> so that no error
     }
 }
 
