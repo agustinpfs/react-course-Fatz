@@ -23,7 +23,7 @@ class App extends Component{
     }
     // console.log(newTask)
     this.setState({
-      tasks: [...this.state.tasks, newTask]
+      tasks: [...this.state.tasks, newTask] // tomo lo que tenía y agrego un nuevo elemento
     })
   }
 
